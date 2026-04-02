@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Bidya Groundwork — You're not building alone.</title>
+  <meta name="description" content="A 6-week structured program for handpicked African SMEs, working alongside vetted professionals to fix what's underneath.">
+  <meta property="og:title" content="The Bidya Groundwork — You're not building alone.">
+  <meta property="og:description" content="A 6-week structured program for handpicked African SMEs, working alongside vetted professionals to fix what's underneath.">
+  <meta property="og:image" content="/og-default.png">
+  <meta property="og:url" content="https://bidya.africa/groundwork">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@bidyahq">
+  <link rel="canonical" href="https://bidya.africa/groundwork">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .stat-bar {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+    .stat-bar__item {
+      padding: 32px 16px;
+    }
+    .stat-bar__number {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 40px;
+      color: var(--indigo);
+      margin-bottom: 4px;
+    }
+    .stat-bar__label {
+      font-size: 13px;
+      color: rgba(26, 23, 48, 0.6);
+      line-height: 1.4;
+    }
+    .week-card {
+      background: var(--lavender);
+      border-radius: var(--radius);
+      padding: 40px;
+      margin-bottom: 24px;
+    }
+    .week-card__header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+    .week-card__number {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 24px;
+      color: var(--indigo);
+    }
+    .week-card__name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 24px;
+      color: var(--ink);
+    }
+    .week-card__focus {
+      font-style: italic;
+      color: var(--coral);
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    .week-card__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+    }
+    .week-card__col h4 {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--indigo);
+      margin-bottom: 8px;
+    }
+    .week-card__col p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(26, 23, 48, 0.7);
+    }
+    .leaves-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .leaves-card {
+      background: rgba(104, 96, 184, 0.1);
+      border-radius: var(--radius);
+      padding: 32px;
+    }
+    .leaves-card h4 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .leaves-card p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--soft);
+    }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .process-step {
+      text-align: center;
+    }
+    .process-step__number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--indigo);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+    .process-step h4 {
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .process-step__tag {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--soft);
+      margin-bottom: 4px;
+    }
+    .process-step p {
+      font-size: 14px;
+      color: rgba(26, 23, 48, 0.6);
+      line-height: 1.5;
+    }
+    .app-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid rgba(26, 23, 48, 0.12);
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--ink);
+      background: var(--white);
+      transition: border-color 200ms ease;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--indigo);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    .form-confirm {
+      display: none;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+      margin-top: 24px;
+    }
+    .form-confirm p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgba(26, 23, 48, 0.75);
+    }
+    @media (max-width: 768px) {
+      .stat-bar { grid-template-columns: repeat(2, 1fr); }
+      .stat-bar__item:last-child { grid-column: span 2; }
+      .week-card__grid { grid-template-columns: 1fr; }
+      .leaves-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">Bidya</a>
+      <div class="nav__links" id="navLinks">
+        <a href="/build">Build</a>
+        <a href="/scale">Scale</a>
+        <a href="/last">Last</a>
+        <a href="/transfer">Transfer</a>
+        <a href="/groundwork">The Groundwork</a>
+        <a href="#waitlist" class="btn btn--small btn--lavender">Join waitlist</a>
+      </div>
+      <button class="nav__hamburger" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__inner">
+      <a href="/build" class="mobile-menu__link">Build</a>
+      <a href="/scale" class="mobile-menu__link">Scale</a>
+      <a href="/last" class="mobile-menu__link">Last</a>
+      <a href="/transfer" class="mobile-menu__link">Transfer</a>
+      <a href="/groundwork" class="mobile-menu__link">The Groundwork</a>
+      <a href="/professionals" class="mobile-menu__link">For Professionals</a>
+      <a href="/circle" class="mobile-menu__link">The Circle</a>
+      <a href="/dispatch" class="mobile-menu__link">The Dispatch</a>
+      <a href="/about" class="mobile-menu__link">About</a>
+      <a href="#waitlist" class="btn btn--lavender mobile-menu__cta">Join waitlist</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__bg-shape"></div>
+    <div class="container hero__content">
+      <span class="eyebrow eyebrow--amber animate-in">The Bidya Groundwork</span>
+      <h1 class="hero__headline animate-in">The hardest and best thing<br>your business will do.</h1>
+      <p class="hero__sub animate-in">A 6-week structured program for handpicked African SMEs,
+        working alongside vetted professionals to fix what's underneath.
+        Not a course. Not a certificate. The actual work.</p>
+      <div class="hero__ctas animate-in">
+        <a href="#apply" class="btn btn--lavender">Apply now &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- At a Glance -->
+  <section class="section section--lavender">
+    <div class="container">
+      <div class="stat-bar">
+        <div class="stat-bar__item animate-in">
+          <span class="stat-bar__number">6</span>
+          <span class="stat-bar__label">Weeks total</span>
+        </div>
+        <div class="stat-bar__item animate-in">
+          <span class="stat-bar__number">10–15</span>
+          <span class="stat-bar__label">SMEs per cohort</span>
+        </div>
+        <div class="stat-bar__item animate-in">
+          <span class="stat-bar__number">2–3</span>
+          <span class="stat-bar__label">Professionals per SME</span>
+        </div>
+        <div class="stat-bar__item animate-in">
+          <span class="stat-bar__number">3–5hrs</span>
+          <span class="stat-bar__label">Per week from founder</span>
+        </div>
+        <div class="stat-bar__item animate-in">
+          <span class="stat-bar__number">2hrs</span>
+          <span class="stat-bar__label">Per week from each professional</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6-Week Structure -->
+  <section class="section section--white">
+    <div class="container">
+      <span class="eyebrow animate-in">The 6-week structure</span>
+      <h2 class="section__headline animate-in">What happens inside<br>the Groundwork.</h2>
+
+      <div class="week-card animate-in">
+        <div class="week-card__header">
+          <span class="week-card__number">Week 1</span>
+          <span class="week-card__name">— Diagnose</span>
+        </div>
+        <p class="week-card__focus">What is actually broken — not what they think is broken</p>
+        <div class="week-card__grid">
+          <div class="week-card__col"><h4>What the SME does</h4><p>Complete a business health audit. Map the current state of finances, ops, brand, and team honestly.</p></div>
+          <div class="week-card__col"><h4>What the professionals do</h4><p>Review the audit. Each professional identifies 2 to 3 root issues. No solutions yet — diagnosis only.</p></div>
+          <div class="week-card__col"><h4>Deliverable</h4><p>A shared problem map agreed between founder and professionals.</p></div>
+        </div>
+      </div>
+
+      <div class="week-card animate-in">
+        <div class="week-card__header">
+          <span class="week-card__number">Week 2</span>
+          <span class="week-card__name">— Prioritise</span>
+        </div>
+        <p class="week-card__focus">Not everything can be fixed — choose what matters most</p>
+        <div class="week-card__grid">
+          <div class="week-card__col"><h4>What the SME does</h4><p>Rank top 3 problems by impact and urgency. Share with professionals for a reality check.</p></div>
+          <div class="week-card__col"><h4>What the professionals do</h4><p>Challenge or validate the ranking. Agree on one primary focus area for weeks 3 to 5.</p></div>
+          <div class="week-card__col"><h4>Deliverable</h4><p>A clear 3-priority list with one agreed primary focus. Written and signed off.</p></div>
+        </div>
+      </div>
+
+      <div class="week-card animate-in">
+        <div class="week-card__header">
+          <span class="week-card__number">Week 3</span>
+          <span class="week-card__name">— Build</span>
+        </div>
+        <p class="week-card__focus">Do the actual work on priority one</p>
+        <div class="week-card__grid">
+          <div class="week-card__col"><h4>What the SME does</h4><p>Execute first assigned tasks — bookkeeping setup, repriced products, business registration, or brand clarity.</p></div>
+          <div class="week-card__col"><h4>What the professionals do</h4><p>Guide, review, and unblock. At least one live check-in session this week.</p></div>
+          <div class="week-card__col"><h4>Deliverable</h4><p>First tangible fix in place and documented.</p></div>
+        </div>
+      </div>
+
+      <div class="week-card animate-in">
+        <div class="week-card__header">
+          <span class="week-card__number">Week 4</span>
+          <span class="week-card__name">— Deepen</span>
+        </div>
+        <p class="week-card__focus">Tackle priority two and stress-test priority one</p>
+        <div class="week-card__grid">
+          <div class="week-card__col"><h4>What the SME does</h4><p>Begin work on second priority. Test whether Week 3 fix is holding up.</p></div>
+          <div class="week-card__col"><h4>What the professionals do</h4><p>Introduce additional tools or contacts. Flag if priority one needs revisiting.</p></div>
+          <div class="week-card__col"><h4>Deliverable</h4><p>Mid-cohort check-in call with Bidya team.</p></div>
+        </div>
+      </div>
+
+      <div class="week-card animate-in">
+        <div class="week-card__header">
+          <span class="week-card__number">Week 5</span>
+          <span class="week-card__name">— Systemise</span>
+        </div>
+        <p class="week-card__focus">Turn fixes into processes that run without the founder</p>
+        <div class="week-card__grid">
+          <div class="week-card__col"><h4>What the SME does</h4><p>Document every fix as a repeatable process. Write simple one-page SOPs for each key change.</p></div>
+          <div class="week-card__col"><h4>What the professionals do</h4><p>Review SOPs. Confirm what can now run without their involvement.</p></div>
+          <div class="week-card__col"><h4>Deliverable</h4><p>A simple operations playbook. The founder owns this permanently.</p></div>
+        </div>
+      </div>
+
+      <div class="week-card animate-in">
+        <div class="week-card__header">
+          <span class="week-card__number">Week 6</span>
+          <span class="week-card__name">— Close &amp; continue</span>
+        </div>
+        <p class="week-card__focus">Celebrate what changed. Plan what comes next.</p>
+        <div class="week-card__grid">
+          <div class="week-card__col"><h4>What the SME does</h4><p>Present before and after to the full cohort. Share the Groundwork story.</p></div>
+          <div class="week-card__col"><h4>What the professionals do</h4><p>Write a final assessment note. Write a short endorsement for the founder's story.</p></div>
+          <div class="week-card__col"><h4>Deliverable</h4><p>The Groundwork Report — a case study published with founder permission.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Every Founder Leaves With -->
+  <section class="section section--ink">
+    <div class="container">
+      <span class="eyebrow eyebrow--amber animate-in">What every founder leaves with</span>
+      <h2 class="section__headline section__headline--white animate-in">Not theory.<br>Real outcomes.</h2>
+      <div class="leaves-grid">
+        <div class="leaves-card animate-in">
+          <h4>A fixed foundation</h4>
+          <p>At least one core business problem structurally solved — not patched, solved.</p>
+        </div>
+        <div class="leaves-card animate-in">
+          <h4>An operations playbook</h4>
+          <p>A simple document covering every change made. Theirs to keep forever.</p>
+        </div>
+        <div class="leaves-card animate-in">
+          <h4>A professional network</h4>
+          <p>2 to 3 real relationships with professionals who know their business.</p>
+        </div>
+        <div class="leaves-card animate-in">
+          <h4>A documented story</h4>
+          <p>Their before and after, captured and published as a Bidya Groundwork case study.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Process -->
+  <section class="section section--white">
+    <div class="container">
+      <span class="eyebrow animate-in">How to apply</span>
+      <h2 class="section__headline animate-in">The application process.</h2>
+      <div class="process-steps">
+        <div class="process-step animate-in">
+          <span class="process-step__number">1</span>
+          <h4>Interest form</h4>
+          <span class="process-step__tag">Public &middot; Always open</span>
+          <p>A short 3-minute form. Name, business type, country, years running, biggest challenge.</p>
+        </div>
+        <div class="process-step animate-in">
+          <span class="process-step__number">2</span>
+          <h4>Full application</h4>
+          <span class="process-step__tag">Invite only &middot; Time-limited</span>
+          <p>7 questions. Takes 20–30 minutes to complete honestly. Sent only to founders who pass the interest form.</p>
+        </div>
+        <div class="process-step animate-in">
+          <span class="process-step__number">3</span>
+          <h4>Internal review</h4>
+          <span class="process-step__tag">5–7 days</span>
+          <p>Scored across three dimensions: problem fit, commitment signals, transformation potential.</p>
+        </div>
+        <div class="process-step animate-in">
+          <span class="process-step__number">4</span>
+          <h4>Founder call</h4>
+          <span class="process-step__tag">15 minutes</span>
+          <p>Not an interview — a conversation. Checking energy, honesty, and readiness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Form -->
+  <section class="section section--lavender" id="apply">
+    <div class="container">
+      <span class="eyebrow animate-in">Express your interest</span>
+      <h2 class="section__headline animate-in">Start here.</h2>
+      <form class="app-form animate-in" action="https://formspree.io/f/placeholder" method="POST" id="groundworkForm">
+        <div class="form-group">
+          <label for="gw-name">Full name</label>
+          <input type="text" id="gw-name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="gw-business">Business name</label>
+          <input type="text" id="gw-business" name="business_name" required>
+        </div>
+        <div class="form-group">
+          <label for="gw-country">Country</label>
+          <input type="text" id="gw-country" name="country" required>
+        </div>
+        <div class="form-group">
+          <label for="gw-industry">Industry / sector</label>
+          <input type="text" id="gw-industry" name="industry" required>
+        </div>
+        <div class="form-group">
+          <label for="gw-years">How long have you been running?</label>
+          <select id="gw-years" name="years_running" required>
+            <option value="" disabled selected>Select</option>
+            <option value="Under 6 months">Under 6 months</option>
+            <option value="6-12 months">6–12 months</option>
+            <option value="1-2 years">1–2 years</option>
+            <option value="2-5 years">2–5 years</option>
+            <option value="5+ years">5+ years</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="gw-challenge">In one sentence, what is the biggest challenge your business faces right now?</label>
+          <textarea id="gw-challenge" name="challenge" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="gw-email">Email address</label>
+          <input type="email" id="gw-email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="gw-source">How did you hear about Bidya?</label>
+          <input type="text" id="gw-source" name="source">
+        </div>
+        <button type="submit" class="btn btn--indigo" style="width:100%;">Submit my interest &rarr;</button>
+      </form>
+      <div class="form-confirm" id="groundworkConfirm">
+        <p>We've received your interest. If you're a fit for the
+          next cohort, you'll receive the full application within
+          7 days. Watch your inbox.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__closing animate-in">For what endures.</p>
+      <p class="footer__pillars animate-in">Build &middot; Scale &middot; Last &middot; Transfer</p>
+      <nav class="footer__links animate-in">
+        <a href="/about">About</a>
+        <a href="/groundwork">The Groundwork</a>
+        <a href="/professionals">For Professionals</a>
+        <a href="/circle">The Circle</a>
+        <a href="/dispatch">The Dispatch</a>
+      </nav>
+      <p class="footer__social animate-in">@bidyahq — Instagram &middot; X &middot; LinkedIn &middot; TikTok</p>
+      <p class="footer__legal animate-in">&copy; 2025 Bidya. Built for African businesses.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Professionals — Bidya</title>
+  <meta name="description" content="Join the founding 50 professionals building something real for African business. 2 hours a week. A founding legacy.">
+  <meta property="og:title" content="For Professionals — Bidya">
+  <meta property="og:description" content="Join the founding 50 professionals building something real for African business. 2 hours a week. A founding legacy.">
+  <meta property="og:image" content="/og-default.png">
+  <meta property="og:url" content="https://bidya.africa/professionals">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@bidyahq">
+  <link rel="canonical" href="https://bidya.africa/professionals">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <style>
+    /* === Professionals Page === */
+
+    /* --- Proposition Body --- */
+    .proposition__body {
+      max-width: 680px;
+      margin-bottom: 0;
+    }
+
+    .proposition__body p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: rgba(26, 23, 48, 0.75);
+      margin-bottom: 0;
+    }
+
+    /* --- What You Get Cards --- */
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .benefit-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(26, 23, 48, 0.08);
+    }
+
+    .benefit-card__number {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--indigo);
+      margin-bottom: 12px;
+    }
+
+    .benefit-card__title {
+      font-weight: 600;
+      font-size: 17px;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .benefit-card__desc {
+      font-size: 15px;
+      color: rgba(26, 23, 48, 0.65);
+      line-height: 1.6;
+    }
+
+    /* --- Needs Table --- */
+    .needs-table {
+      width: 100%;
+      max-width: 640px;
+      border-collapse: collapse;
+      margin-top: 40px;
+    }
+
+    .needs-table th,
+    .needs-table td {
+      text-align: left;
+      padding: 16px 20px;
+      font-size: 15px;
+      border-bottom: 1px solid rgba(26, 23, 48, 0.08);
+    }
+
+    .needs-table th {
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .needs-table td:first-child {
+      color: rgba(26, 23, 48, 0.75);
+    }
+
+    .needs-table td:last-child {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--indigo);
+      text-align: center;
+      width: 100px;
+    }
+
+    /* --- Agreement List --- */
+    .agreement-list {
+      max-width: 700px;
+      margin-top: 40px;
+    }
+
+    .agreement-item {
+      display: flex;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(155, 148, 212, 0.2);
+    }
+
+    .agreement-item:last-child {
+      border-bottom: none;
+    }
+
+    .agreement-item__label {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--lavender);
+      min-width: 160px;
+      flex-shrink: 0;
+    }
+
+    .agreement-item__value {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--soft);
+    }
+
+    /* --- Professional Form --- */
+    .pro-form {
+      max-width: 560px;
+      margin: 40px auto 0;
+    }
+
+    .pro-form__group {
+      margin-bottom: 20px;
+    }
+
+    .pro-form__label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .pro-form__input,
+    .pro-form__select,
+    .pro-form__textarea {
+      width: 100%;
+      padding: 14px 20px;
+      border: 2px solid rgba(26, 23, 48, 0.12);
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--ink);
+      background: var(--white);
+      transition: border-color 200ms ease;
+    }
+
+    .pro-form__input:focus,
+    .pro-form__select:focus,
+    .pro-form__textarea:focus {
+      outline: none;
+      border-color: var(--indigo);
+    }
+
+    .pro-form__input::placeholder,
+    .pro-form__textarea::placeholder {
+      color: rgba(26, 23, 48, 0.35);
+    }
+
+    .pro-form__select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%231A1730' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 44px;
+      cursor: pointer;
+    }
+
+    .pro-form__textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .pro-form__optional {
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(26, 23, 48, 0.45);
+      margin-left: 4px;
+    }
+
+    .pro-form__submit {
+      margin-top: 8px;
+      width: 100%;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      .benefit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .agreement-item {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .agreement-item__label {
+        min-width: auto;
+      }
+
+      .needs-table {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">Bidya</a>
+      <div class="nav__links" id="navLinks">
+        <a href="/build">Build</a>
+        <a href="/scale">Scale</a>
+        <a href="/last">Last</a>
+        <a href="/transfer">Transfer</a>
+        <a href="/groundwork">The Groundwork</a>
+        <a href="#waitlist" class="btn btn--small btn--lavender">Join waitlist</a>
+      </div>
+      <button class="nav__hamburger" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__inner">
+      <a href="/build" class="mobile-menu__link">Build</a>
+      <a href="/scale" class="mobile-menu__link">Scale</a>
+      <a href="/last" class="mobile-menu__link">Last</a>
+      <a href="/transfer" class="mobile-menu__link">Transfer</a>
+      <a href="/groundwork" class="mobile-menu__link">The Groundwork</a>
+      <a href="/professionals" class="mobile-menu__link">For Professionals</a>
+      <a href="/circle" class="mobile-menu__link">The Circle</a>
+      <a href="/dispatch" class="mobile-menu__link">The Dispatch</a>
+      <a href="/about" class="mobile-menu__link">About</a>
+      <a href="#waitlist" class="btn btn--lavender mobile-menu__cta">Join waitlist</a>
+    </div>
+  </div>
+
+  <!-- Section 1: Hero -->
+  <section class="hero">
+    <div class="hero__bg-shape"></div>
+    <div class="container hero__content">
+      <span class="eyebrow eyebrow--soft animate-in">For professionals</span>
+      <h1 class="hero__headline animate-in">2 hours a week.<br>A founding legacy.</h1>
+      <p class="hero__sub animate-in">You're not being asked to volunteer. You're being invited to be one of the 50 professionals who built something real for African business — before anyone else did.</p>
+      <div class="hero__ctas animate-in">
+        <a href="#pro-form" class="btn btn--lavender">Join the professional network &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: The Proposition -->
+  <section class="section section--white">
+    <div class="container">
+      <span class="eyebrow animate-in">The proposition</span>
+      <h2 class="section__headline animate-in">Why this matters.</h2>
+      <div class="proposition__body animate-in">
+        <p>Most African SMEs are doing it without a lawyer, without an accountant, without a brand strategist. Not because they don't want help — because they can't afford it. Bidya changes that. And we need professionals who believe it should change. Give 2 hours a week for 6 weeks. Be matched with an SME that needs exactly what you do. Watch something transform. Get credit for it permanently.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: What You Get -->
+  <section class="section section--lavender">
+    <div class="container">
+      <span class="eyebrow animate-in">What you get</span>
+      <h2 class="section__headline animate-in">Not just impact.<br>Recognition.</h2>
+      <div class="benefit-grid">
+        <div class="benefit-card animate-in">
+          <span class="benefit-card__number">01</span>
+          <h4 class="benefit-card__title">Founding professional status</h4>
+          <p class="benefit-card__desc">Named on Bidya permanently as a founding contributor — visible to every SME on the platform.</p>
+        </div>
+        <div class="benefit-card animate-in">
+          <span class="benefit-card__number">02</span>
+          <h4 class="benefit-card__title">Case study co-credit</h4>
+          <p class="benefit-card__desc">Every Groundwork Report credits the professionals who worked on it publicly, by name and field.</p>
+        </div>
+        <div class="benefit-card animate-in">
+          <span class="benefit-card__number">03</span>
+          <h4 class="benefit-card__title">First access to paid work</h4>
+          <p class="benefit-card__desc">Priority listing on Bidya Works when the professional marketplace launches.</p>
+        </div>
+        <div class="benefit-card animate-in">
+          <span class="benefit-card__number">04</span>
+          <h4 class="benefit-card__title">A peer community</h4>
+          <p class="benefit-card__desc">Access to the Bidya professional circle — a growing network of experts across Africa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: What We Need -->
+  <section class="section section--white">
+    <div class="container">
+      <span class="eyebrow animate-in">What we need</span>
+      <h2 class="section__headline animate-in">50 professionals.<br>8 disciplines.</h2>
+      <table class="needs-table animate-in">
+        <thead>
+          <tr>
+            <th>Discipline</th>
+            <th>Spots</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tax &amp; compliance</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>Operations &amp; strategy</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Branding &amp; design</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Marketing &amp; content</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Accounting &amp; bookkeeping</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Tech &amp; digital tools</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>HR &amp; hiring</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Photography &amp; creative</td>
+            <td>4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Section 5: The Agreement -->
+  <section class="section section--ink">
+    <div class="container">
+      <span class="eyebrow eyebrow--amber animate-in">The agreement</span>
+      <h2 class="section__headline section__headline--white animate-in">Clear expectations.<br>No surprises.</h2>
+      <div class="agreement-list">
+        <div class="agreement-item animate-in">
+          <span class="agreement-item__label">Time</span>
+          <span class="agreement-item__value">Minimum 2 hours per week for 6 weeks.</span>
+        </div>
+        <div class="agreement-item animate-in">
+          <span class="agreement-item__label">What you deliver</span>
+          <span class="agreement-item__value">Practical help — tools, reviews, templates, at least one live session per week. Not just advice.</span>
+        </div>
+        <div class="agreement-item animate-in">
+          <span class="agreement-item__label">What you don't do</span>
+          <span class="agreement-item__value">Solicit paid services directly to SMEs during the program. Bidya Works handles that after.</span>
+        </div>
+        <div class="agreement-item animate-in">
+          <span class="agreement-item__label">Confidentiality</span>
+          <span class="agreement-item__value">Business information shared stays within the team.</span>
+        </div>
+        <div class="agreement-item animate-in">
+          <span class="agreement-item__label">Exit clause</span>
+          <span class="agreement-item__value">7 days notice if unable to continue.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Professional Interest Form -->
+  <section class="section section--lavender" id="pro-form">
+    <div class="container">
+      <span class="eyebrow animate-in">Apply now</span>
+      <h2 class="section__headline animate-in">Professional interest form.</h2>
+      <p class="section__sub animate-in">Founding spots are limited. Submit your interest and we'll be in touch within 72 hours.</p>
+      <form class="pro-form animate-in" action="https://formspree.io/f/placeholder" method="POST">
+        <div class="pro-form__group">
+          <label class="pro-form__label" for="fullName">Full name</label>
+          <input class="pro-form__input" type="text" id="fullName" name="full_name" placeholder="Your full name" required>
+        </div>
+        <div class="pro-form__group">
+          <label class="pro-form__label" for="proField">Professional field</label>
+          <select class="pro-form__select" id="proField" name="professional_field" required>
+            <option value="" disabled selected>Select your field</option>
+            <option value="Tax & compliance">Tax &amp; compliance</option>
+            <option value="Operations & strategy">Operations &amp; strategy</option>
+            <option value="Branding & design">Branding &amp; design</option>
+            <option value="Marketing & content">Marketing &amp; content</option>
+            <option value="Accounting & bookkeeping">Accounting &amp; bookkeeping</option>
+            <option value="Tech & digital tools">Tech &amp; digital tools</option>
+            <option value="HR & hiring">HR &amp; hiring</option>
+            <option value="Photography & creative">Photography &amp; creative</option>
+          </select>
+        </div>
+        <div class="pro-form__group">
+          <label class="pro-form__label" for="country">Country</label>
+          <input class="pro-form__input" type="text" id="country" name="country" placeholder="e.g. Nigeria" required>
+        </div>
+        <div class="pro-form__group">
+          <label class="pro-form__label" for="experience">Years of experience</label>
+          <select class="pro-form__select" id="experience" name="years_of_experience" required>
+            <option value="" disabled selected>Select range</option>
+            <option value="1-3">1 - 3 years</option>
+            <option value="4-6">4 - 6 years</option>
+            <option value="7-10">7 - 10 years</option>
+            <option value="10+">10+ years</option>
+          </select>
+        </div>
+        <div class="pro-form__group">
+          <label class="pro-form__label" for="whyJoin">Why do you want to be part?</label>
+          <textarea class="pro-form__textarea" id="whyJoin" name="why_join" placeholder="One sentence is enough." required></textarea>
+        </div>
+        <div class="pro-form__group">
+          <label class="pro-form__label" for="portfolio">LinkedIn / portfolio URL <span class="pro-form__optional">(optional)</span></label>
+          <input class="pro-form__input" type="url" id="portfolio" name="portfolio_url" placeholder="https://">
+        </div>
+        <div class="pro-form__group">
+          <label class="pro-form__label" for="email">Email</label>
+          <input class="pro-form__input" type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <button type="submit" class="btn btn--indigo pro-form__submit">Submit my interest &rarr;</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__closing animate-in">For what endures.</p>
+      <p class="footer__pillars animate-in">Build &middot; Scale &middot; Last &middot; Transfer</p>
+      <nav class="footer__links animate-in">
+        <a href="/about">About</a>
+        <a href="/groundwork">The Groundwork</a>
+        <a href="/professionals">For Professionals</a>
+        <a href="/circle">The Circle</a>
+        <a href="/dispatch">The Dispatch</a>
+      </nav>
+      <p class="footer__social animate-in">@bidyahq — Instagram &middot; X &middot; LinkedIn &middot; TikTok</p>
+      <p class="footer__legal animate-in">&copy; 2025 Bidya. Built for African businesses.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
