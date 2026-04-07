@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Bidya — A platform for African businesses built to stay.</title>
+  <meta name="description" content="Bidya is a framework, a cultural shift, and a strategic platform for African entrepreneurs building businesses that last.">
+  <meta property="og:title" content="About Bidya — A platform for African businesses built to stay.">
+  <meta property="og:description" content="Bidya is a framework, a cultural shift, and a strategic platform for African entrepreneurs building businesses that last.">
+  <meta property="og:image" content="/og-default.png">
+  <meta property="og:url" content="https://bidya.africa/about">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@bidyahq">
+  <link rel="canonical" href="https://bidya.africa/about">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Analytics placeholder -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <style>
+    /* About page — Hero */
+    .about-hero {
+      background: var(--lavender);
+      padding: 160px 0 var(--section-pad);
+    }
+
+    .about-hero__headline {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 32px;
+      max-width: 640px;
+    }
+
+    .about-hero__body {
+      max-width: 640px;
+    }
+
+    .about-hero__body p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: rgba(26, 23, 48, 0.75);
+      margin-bottom: 20px;
+    }
+
+    /* About page — Premise */
+    .premise__body {
+      max-width: 640px;
+    }
+
+    .premise__body p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: rgba(26, 23, 48, 0.75);
+      margin-bottom: 16px;
+    }
+
+    /* About page — Persona cards */
+    .persona-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .persona-card {
+      background: var(--lavender);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+
+    .persona-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(26, 23, 48, 0.08);
+    }
+
+    .persona-card__title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .persona-card__stage {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--indigo);
+      margin-bottom: 16px;
+    }
+
+    .persona-card__desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(26, 23, 48, 0.65);
+    }
+
+    /* About page — Promise */
+    .promise__statement {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(22px, 3.5vw, 32px);
+      line-height: 1.5;
+      color: var(--white);
+      max-width: 720px;
+    }
+
+    /* Responsive — About page */
+    @media (max-width: 768px) {
+      .about-hero {
+        padding-top: 120px;
+      }
+
+      .persona-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .persona-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">Bidya</a>
+      <div class="nav__links" id="navLinks">
+        <a href="/build">Build</a>
+        <a href="/scale">Scale</a>
+        <a href="/last">Last</a>
+        <a href="/transfer">Transfer</a>
+        <a href="/groundwork">The Groundwork</a>
+        <a href="#waitlist" class="btn btn--small btn--lavender">Join waitlist</a>
+      </div>
+      <button class="nav__hamburger" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__inner">
+      <a href="/build" class="mobile-menu__link">Build</a>
+      <a href="/scale" class="mobile-menu__link">Scale</a>
+      <a href="/last" class="mobile-menu__link">Last</a>
+      <a href="/transfer" class="mobile-menu__link">Transfer</a>
+      <a href="/groundwork" class="mobile-menu__link">The Groundwork</a>
+      <a href="/professionals" class="mobile-menu__link">For Professionals</a>
+      <a href="/circle" class="mobile-menu__link">The Circle</a>
+      <a href="/dispatch" class="mobile-menu__link">The Dispatch</a>
+      <a href="/about" class="mobile-menu__link">About</a>
+      <a href="#waitlist" class="btn btn--lavender mobile-menu__cta">Join waitlist</a>
+    </div>
+  </div>
+
+  <!-- Section 1: Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <h1 class="about-hero__headline animate-in">A platform for African businesses built to stay.</h1>
+      <div class="about-hero__body">
+        <p class="animate-in">Bidya is not another business community. It's not a content page or a newsletter with tips. It's a framework, a cultural shift, and a strategic platform for African entrepreneurs building businesses that last.</p>
+        <p class="animate-in">The name comes from the Igbo root meaning to stay, to remain, to endure. We don't just build for success. We build so it won't die with you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: The Bidya Premise -->
+  <section class="section section--white">
+    <div class="container">
+      <span class="eyebrow animate-in">The Bidya Premise</span>
+      <h2 class="section__headline animate-in">Why we exist.</h2>
+      <div class="premise__body">
+        <p class="animate-in">A lot of African businesses don't fail because they're unviable. They fail because they were never structured to succeed.</p>
+        <p class="animate-in">Because the average small business owner doesn't have access to the frameworks, support systems, or professionals that make businesses last. Bidya is here to close that gap.</p>
+        <p class="animate-in">To give the knowledge, mindset, and access usually reserved for large enterprises — to the people actually powering the economy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: The Four Pillars -->
+  <section class="section section--lavender">
+    <div class="container">
+      <span class="eyebrow animate-in">How Bidya works</span>
+      <h2 class="section__headline animate-in">Four pillars.<br>One direction.</h2>
+      <p class="section__sub animate-in">Bidya doesn't just share content. It gives you a<br class="hide-mobile">
+        system — four phases of building a business that lasts.</p>
+      <div class="pillars-grid">
+        <div class="pillar-card animate-in">
+          <div class="pillar-card__header pillar-card__header--build">
+            <span class="pillar-card__number">01</span>
+            <h3 class="pillar-card__name">Build</h3>
+          </div>
+          <div class="pillar-card__body">
+            <p class="pillar-card__tagline">Fix the foundation</p>
+            <p class="pillar-card__desc">Structure, finance, brand, and legal — done properly from day one. Before you scale anything, you need something solid to stand on.</p>
+            <a href="/build" class="pillar-card__cta">Explore Build &rarr;</a>
+          </div>
+        </div>
+        <div class="pillar-card animate-in">
+          <div class="pillar-card__header pillar-card__header--scale">
+            <span class="pillar-card__number">02</span>
+            <h3 class="pillar-card__name">Scale</h3>
+          </div>
+          <div class="pillar-card__body">
+            <p class="pillar-card__tagline">Grow with intention</p>
+            <p class="pillar-card__desc">Systems, hiring, operations, and marketing that hold up as you expand. Scaling without structure is just chaos with more people.</p>
+            <a href="/scale" class="pillar-card__cta">Explore Scale &rarr;</a>
+          </div>
+        </div>
+        <div class="pillar-card animate-in">
+          <div class="pillar-card__header pillar-card__header--last">
+            <span class="pillar-card__number">03</span>
+            <h3 class="pillar-card__name">Last</h3>
+          </div>
+          <div class="pillar-card__body">
+            <p class="pillar-card__tagline">Design for longevity</p>
+            <p class="pillar-card__desc">Cashflow stability, resilience, and sustainability built into the core of your business. Not every year — every decade.</p>
+            <a href="/last" class="pillar-card__cta">Explore Last &rarr;</a>
+          </div>
+        </div>
+        <div class="pillar-card animate-in">
+          <div class="pillar-card__header pillar-card__header--transfer">
+            <span class="pillar-card__number">04</span>
+            <h3 class="pillar-card__name">Transfer</h3>
+          </div>
+          <div class="pillar-card__body">
+            <p class="pillar-card__tagline">Build beyond yourself</p>
+            <p class="pillar-card__desc">Succession planning, exit strategy, handover frameworks. If it all ends with you, it was never really a business.</p>
+            <a href="/transfer" class="pillar-card__cta">Explore Transfer &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Who We're For -->
+  <section class="section section--white">
+    <div class="container">
+      <span class="eyebrow animate-in">Who we're for</span>
+      <h2 class="section__headline animate-in">Built for founders at<br>every stage.</h2>
+      <div class="persona-grid">
+        <div class="persona-card animate-in">
+          <h3 class="persona-card__title">The Intentional Hustler</h3>
+          <span class="persona-card__stage">Stage: 0–2 years</span>
+          <p class="persona-card__desc">Started as a survival move. Running on Instagram and WhatsApp. Making money but building without structure. Ready to get serious.</p>
+        </div>
+        <div class="persona-card animate-in">
+          <h3 class="persona-card__title">The Ready-to-Scale Operator</h3>
+          <span class="persona-card__stage">Stage: 2–5 years</span>
+          <p class="persona-card__desc">Has product-market fit. Growth has plateaued. Hiring is broken. Needs systems and real expert support without corporate price tags.</p>
+        </div>
+        <div class="persona-card animate-in">
+          <h3 class="persona-card__title">The Legacy Founder</h3>
+          <span class="persona-card__stage">Stage: 5+ years</span>
+          <p class="persona-card__desc">Built something real but can't step away. No succession plan. No handover. Knows something has to change before it's too late.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: The Bidya Promise -->
+  <section class="section section--ink">
+    <div class="container">
+      <span class="eyebrow eyebrow--soft animate-in">The Bidya Promise</span>
+      <p class="promise__statement animate-in">
+        We speak simply, but with strategy.<br>
+        We prioritise clarity over clout.<br>
+        We design for legacy, not just launch.<br>
+        We are for businesses that want to be remembered, not just seen.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__closing animate-in">For what endures.</p>
+      <p class="footer__pillars animate-in">Build &middot; Scale &middot; Last &middot; Transfer</p>
+      <nav class="footer__links animate-in">
+        <a href="/about">About</a>
+        <a href="/groundwork">The Groundwork</a>
+        <a href="/professionals">For Professionals</a>
+        <a href="/circle">The Circle</a>
+        <a href="/dispatch">The Dispatch</a>
+      </nav>
+      <p class="footer__social animate-in">@bidyahq — Instagram &middot; X &middot; LinkedIn &middot; TikTok</p>
+      <p class="footer__legal animate-in">&copy; 2025 Bidya. Built for African businesses.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
