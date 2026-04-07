@@ -27,13 +27,51 @@
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="/" class="nav__logo">Bidya</a>
-      <div class="nav__links" id="navLinks">
-        <a href="/build">Build</a>
-        <a href="/scale">Scale</a>
-        <a href="/last">Last</a>
-        <a href="/transfer">Transfer</a>
-        <a href="/groundwork">The Groundwork</a>
+      <div class="nav__left">
+        <a href="/" class="nav__logo">Bidya</a>
+        <div class="nav__links">
+          <div class="nav__dropdown">
+            <button class="nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">Pillars</button>
+            <div class="nav__dropdown-menu">
+              <a href="/build" class="nav__dropdown-item">
+                <strong>Build</strong>
+                <span>Fix the foundation</span>
+              </a>
+              <a href="/scale" class="nav__dropdown-item">
+                <strong>Scale</strong>
+                <span>Grow with intention</span>
+              </a>
+              <a href="/last" class="nav__dropdown-item">
+                <strong>Last</strong>
+                <span>Design for longevity</span>
+              </a>
+              <a href="/transfer" class="nav__dropdown-item">
+                <strong>Transfer</strong>
+                <span>Build beyond yourself</span>
+              </a>
+            </div>
+          </div>
+          <a href="/groundwork">Groundwork</a>
+        </div>
+      </div>
+      <div class="nav__right">
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">Resources</button>
+          <div class="nav__dropdown-menu nav__dropdown-menu--right">
+            <a href="/dispatch" class="nav__dropdown-item">
+              <strong>The Dispatch</strong>
+              <span>Our weekly newsletter for founders</span>
+            </a>
+            <a href="/circle" class="nav__dropdown-item">
+              <strong>The Circle</strong>
+              <span>WhatsApp community for African SMEs</span>
+            </a>
+            <a href="/about" class="nav__dropdown-item">
+              <strong>About Bidya</strong>
+              <span>Our story and philosophy</span>
+            </a>
+          </div>
+        </div>
         <a href="#waitlist" class="btn btn--small btn--lavender">Join waitlist</a>
       </div>
       <button class="nav__hamburger" id="navToggle" aria-label="Toggle navigation menu">
@@ -47,14 +85,17 @@
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu__inner">
+      <p class="mobile-menu__label">Pillars</p>
       <a href="/build" class="mobile-menu__link">Build</a>
       <a href="/scale" class="mobile-menu__link">Scale</a>
       <a href="/last" class="mobile-menu__link">Last</a>
       <a href="/transfer" class="mobile-menu__link">Transfer</a>
-      <a href="/groundwork" class="mobile-menu__link">The Groundwork</a>
-      <a href="/professionals" class="mobile-menu__link">For Professionals</a>
-      <a href="/circle" class="mobile-menu__link">The Circle</a>
+      <div class="mobile-menu__divider"></div>
+      <a href="/groundwork" class="mobile-menu__link">Groundwork</a>
+      <div class="mobile-menu__divider"></div>
+      <p class="mobile-menu__label">Resources</p>
       <a href="/dispatch" class="mobile-menu__link">The Dispatch</a>
+      <a href="/circle" class="mobile-menu__link">The Circle</a>
       <a href="/about" class="mobile-menu__link">About</a>
       <a href="#waitlist" class="btn btn--lavender mobile-menu__cta">Join waitlist</a>
     </div>
@@ -83,11 +124,10 @@
       <span class="eyebrow animate-in">Why Bidya exists</span>
       <h2 class="section__headline animate-in">50% of African SMEs die<br>in their first year.</h2>
       <div class="problem__body animate-in">
-        <p>Not because the ideas are bad.<br>
-          Not because the market doesn't want what they're selling.</p>
-        <p>But because nobody taught them how to build something that lasts.
-          Because access to frameworks, professional support, and real guidance
-          has always been reserved for bigger businesses.</p>
+        <p>The ideas are there. The customers are there. The hustle is definitely there.</p>
+        <p>What's missing is structure — the frameworks, professional support, and real
+          guidance that turn a hustle into a business. The kind of help that's always been
+          reserved for bigger companies with bigger budgets.</p>
         <p><strong>Bidya is here to change that.</strong></p>
       </div>
       <div class="stats-grid">
@@ -237,57 +277,7 @@
     </div>
   </section>
 
-  <!-- Section 5: For Professionals -->
-  <section class="section section--white">
-    <div class="container">
-      <span class="eyebrow animate-in">For professionals</span>
-      <h2 class="section__headline animate-in">2 hours a week.<br>A founding legacy.</h2>
-      <div class="pros__body animate-in">
-        <p>You're not being asked to volunteer.
-          You're being invited to be one of the 50 professionals
-          who built something real for African business — before
-          anyone else did.</p>
-        <p>Give 2 hours a week. Get founding professional status,
-          case study co-credit, and first access to paid work when
-          Bidya Works launches.</p>
-      </div>
-      <div class="perks-grid">
-        <div class="perk-card animate-in">
-          <div class="perk-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          </div>
-          <h4 class="perk-card__title">Founding status</h4>
-          <p class="perk-card__desc">Named permanently on Bidya as a founding contributor</p>
-        </div>
-        <div class="perk-card animate-in">
-          <div class="perk-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-          </div>
-          <h4 class="perk-card__title">Case study credit</h4>
-          <p class="perk-card__desc">Every Groundwork Report publicly credits you</p>
-        </div>
-        <div class="perk-card animate-in">
-          <div class="perk-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-          </div>
-          <h4 class="perk-card__title">First access to paid work</h4>
-          <p class="perk-card__desc">Priority listing on Bidya Works at launch</p>
-        </div>
-        <div class="perk-card animate-in">
-          <div class="perk-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <h4 class="perk-card__title">A professional community</h4>
-          <p class="perk-card__desc">A growing peer network across Africa</p>
-        </div>
-      </div>
-      <div class="animate-in" style="text-align: center; margin-top: 48px;">
-        <a href="/professionals" class="btn btn--indigo">Join the professional network &rarr;</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 6: Join the Circle -->
+  <!-- Section 5: Join the Circle -->
   <section class="section section--lavender">
     <div class="container">
       <span class="eyebrow animate-in">The Bidya Circle</span>
@@ -337,12 +327,11 @@
   <!-- Section 8: Footer -->
   <footer class="footer">
     <div class="container">
-      <p class="footer__closing animate-in">For what endures.</p>
+      <p class="footer__closing animate-in">You're not building alone.</p>
       <p class="footer__pillars animate-in">Build &middot; Scale &middot; Last &middot; Transfer</p>
       <nav class="footer__links animate-in">
         <a href="/about">About</a>
         <a href="/groundwork">The Groundwork</a>
-        <a href="/professionals">For Professionals</a>
         <a href="/circle">The Circle</a>
         <a href="/dispatch">The Dispatch</a>
       </nav>

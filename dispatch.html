@@ -90,13 +90,30 @@
 
   <nav class="nav nav--scrolled" id="nav">
     <div class="nav__inner">
-      <a href="/" class="nav__logo">Bidya</a>
-      <div class="nav__links" id="navLinks">
-        <a href="/build">Build</a>
-        <a href="/scale">Scale</a>
-        <a href="/last">Last</a>
-        <a href="/transfer">Transfer</a>
-        <a href="/groundwork">The Groundwork</a>
+      <div class="nav__left">
+        <a href="/" class="nav__logo">Bidya</a>
+        <div class="nav__links">
+          <div class="nav__dropdown">
+            <button class="nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">Pillars</button>
+            <div class="nav__dropdown-menu">
+              <a href="/build" class="nav__dropdown-item"><strong>Build</strong><span>Fix the foundation</span></a>
+              <a href="/scale" class="nav__dropdown-item"><strong>Scale</strong><span>Grow with intention</span></a>
+              <a href="/last" class="nav__dropdown-item"><strong>Last</strong><span>Design for longevity</span></a>
+              <a href="/transfer" class="nav__dropdown-item"><strong>Transfer</strong><span>Build beyond yourself</span></a>
+            </div>
+          </div>
+          <a href="/groundwork">Groundwork</a>
+        </div>
+      </div>
+      <div class="nav__right">
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">Resources</button>
+          <div class="nav__dropdown-menu nav__dropdown-menu--right">
+            <a href="/dispatch" class="nav__dropdown-item"><strong>The Dispatch</strong><span>Our weekly newsletter for founders</span></a>
+            <a href="/circle" class="nav__dropdown-item"><strong>The Circle</strong><span>WhatsApp community for African SMEs</span></a>
+            <a href="/about" class="nav__dropdown-item"><strong>About Bidya</strong><span>Our story and philosophy</span></a>
+          </div>
+        </div>
         <a href="/#waitlist" class="btn btn--small btn--lavender">Join waitlist</a>
       </div>
       <button class="nav__hamburger" id="navToggle" aria-label="Toggle navigation menu">
@@ -107,14 +124,17 @@
 
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu__inner">
+      <p class="mobile-menu__label">Pillars</p>
       <a href="/build" class="mobile-menu__link">Build</a>
       <a href="/scale" class="mobile-menu__link">Scale</a>
       <a href="/last" class="mobile-menu__link">Last</a>
       <a href="/transfer" class="mobile-menu__link">Transfer</a>
-      <a href="/groundwork" class="mobile-menu__link">The Groundwork</a>
-      <a href="/professionals" class="mobile-menu__link">For Professionals</a>
-      <a href="/circle" class="mobile-menu__link">The Circle</a>
+      <div class="mobile-menu__divider"></div>
+      <a href="/groundwork" class="mobile-menu__link">Groundwork</a>
+      <div class="mobile-menu__divider"></div>
+      <p class="mobile-menu__label">Resources</p>
       <a href="/dispatch" class="mobile-menu__link">The Dispatch</a>
+      <a href="/circle" class="mobile-menu__link">The Circle</a>
       <a href="/about" class="mobile-menu__link">About</a>
       <a href="/#waitlist" class="btn btn--lavender mobile-menu__cta">Join waitlist</a>
     </div>
@@ -197,12 +217,11 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="footer__closing animate-in">For what endures.</p>
+      <p class="footer__closing animate-in">You're not building alone.</p>
       <p class="footer__pillars animate-in">Build &middot; Scale &middot; Last &middot; Transfer</p>
       <nav class="footer__links animate-in">
         <a href="/about">About</a>
         <a href="/groundwork">The Groundwork</a>
-        <a href="/professionals">For Professionals</a>
         <a href="/circle">The Circle</a>
         <a href="/dispatch">The Dispatch</a>
       </nav>
