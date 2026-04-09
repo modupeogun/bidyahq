@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbook — Bidya</title>
+  <meta name="description" content="Free templates, tools, and guides to help your African business run better. From operations to branding to finance.">
+  <meta property="og:title" content="Playbook — Bidya">
+  <meta property="og:description" content="Free templates, tools, and guides to help your African business run better.">
+  <meta property="og:image" content="/og-default.png">
+  <meta property="og:url" content="https://bidya.africa/playbook">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@bidyahq">
+  <link rel="canonical" href="https://bidya.africa/playbook">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .playbook-hero {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      padding-top: 120px;
+      padding-bottom: 80px;
+      background: var(--lavender);
+    }
+    .playbook-hero h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(36px, 5vw, 52px);
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 24px;
+      max-width: 640px;
+    }
+    .playbook-hero__sub {
+      font-size: 17px;
+      line-height: 1.7;
+      color: rgba(26,23,48,0.7);
+      max-width: 560px;
+    }
+    .category-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .category-tab {
+      padding: 8px 20px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 2px solid rgba(26,23,48,0.1);
+      color: rgba(26,23,48,0.6);
+      background: var(--white);
+      cursor: pointer;
+      transition: all 200ms ease;
+    }
+    .category-tab:hover,
+    .category-tab--active {
+      border-color: var(--indigo);
+      color: var(--indigo);
+      background: var(--lavender);
+    }
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .resource-card {
+      background: var(--lavender);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+    .resource-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(26,23,48,0.08);
+    }
+    .resource-card__tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+    .resource-card__tag--ops { background: rgba(104,96,184,0.1); color: var(--indigo); }
+    .resource-card__tag--brand { background: rgba(212,120,112,0.1); color: var(--coral); }
+    .resource-card__tag--finance { background: rgba(232,184,106,0.15); color: #B8912E; }
+    .resource-card__tag--comms { background: rgba(26,23,48,0.08); color: var(--ink); }
+    .resource-card__tag--hiring { background: rgba(104,96,184,0.1); color: var(--indigo); }
+    .resource-card__tag--legal { background: rgba(212,120,112,0.1); color: var(--coral); }
+    .resource-card h4 {
+      font-weight: 600;
+      font-size: 17px;
+      color: var(--ink);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .resource-card p {
+      font-size: 14px;
+      color: rgba(26,23,48,0.6);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .resource-card__dl {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--indigo);
+    }
+    .resource-card__dl:hover {
+      color: var(--ink);
+    }
+    .coming-soon {
+      text-align: center;
+      padding: 60px 24px;
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 2px dashed rgba(26,23,48,0.1);
+      margin-top: 24px;
+    }
+    .coming-soon h4 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .coming-soon p {
+      font-size: 15px;
+      color: rgba(26,23,48,0.5);
+    }
+    @media (max-width: 768px) {
+      .resource-grid { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .resource-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <a href="/" class="nav__logo">Bidya</a>
+        <div class="nav__links">
+          <a href="/about">About</a>
+          <a href="/brand-test">Brand Test</a>
+        </div>
+      </div>
+      <div class="nav__right">
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">Resources</button>
+          <div class="nav__dropdown-menu nav__dropdown-menu--right">
+            <a href="/playbook" class="nav__dropdown-item">
+              <strong>Playbook</strong>
+              <span>Templates, tools, and guides for your business</span>
+            </a>
+            <a href="/dispatch" class="nav__dropdown-item">
+              <strong>Dispatch</strong>
+              <span>Our weekly newsletter for founders</span>
+            </a>
+            <a href="/circle" class="nav__dropdown-item">
+              <strong>Circle</strong>
+              <span>WhatsApp community for African SMEs</span>
+            </a>
+          </div>
+        </div>
+        <a href="/circle" class="btn btn--small btn--lavender">Join the community</a>
+      </div>
+      <button class="nav__hamburger" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__inner">
+      <a href="/about" class="mobile-menu__link">About</a>
+      <a href="/brand-test" class="mobile-menu__link">Brand Test</a>
+      <div class="mobile-menu__divider"></div>
+      <p class="mobile-menu__label">Resources</p>
+      <a href="/playbook" class="mobile-menu__link">Playbook</a>
+      <a href="/dispatch" class="mobile-menu__link">Dispatch</a>
+      <a href="/circle" class="mobile-menu__link">Circle</a>
+      <a href="/circle" class="btn btn--lavender mobile-menu__cta">Join the community</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="playbook-hero">
+    <div class="container">
+      <span class="eyebrow animate-in">Bidya Playbook</span>
+      <h1 class="animate-in">Everything your business needs. All in one place.</h1>
+      <p class="playbook-hero__sub animate-in">Free templates, guides, and tools across operations, branding, finance, communications, and more. Built specifically for African SMEs who want to run a tighter business.</p>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="category-tabs animate-in">
+        <span class="category-tab category-tab--active">All</span>
+        <span class="category-tab">Operations</span>
+        <span class="category-tab">Branding</span>
+        <span class="category-tab">Finance</span>
+        <span class="category-tab">Communications</span>
+        <span class="category-tab">Hiring</span>
+        <span class="category-tab">Legal</span>
+      </div>
+
+      <div class="resource-grid">
+        <div class="resource-card animate-in">
+          <span class="resource-card__tag resource-card__tag--ops">Operations</span>
+          <h4>Standard Operating Procedure (SOP) Template</h4>
+          <p>A simple, one-page template for documenting any business process so it runs without you.</p>
+          <a href="#" class="resource-card__dl">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download free
+          </a>
+        </div>
+        <div class="resource-card animate-in">
+          <span class="resource-card__tag resource-card__tag--brand">Branding</span>
+          <h4>Brand Messaging Framework</h4>
+          <p>Define your positioning, voice, and key messages in one document. No branding agency needed.</p>
+          <a href="#" class="resource-card__dl">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download free
+          </a>
+        </div>
+        <div class="resource-card animate-in">
+          <span class="resource-card__tag resource-card__tag--finance">Finance</span>
+          <h4>Monthly Cashflow Tracker</h4>
+          <p>A spreadsheet that tracks money in and money out. See exactly where you stand every month.</p>
+          <a href="#" class="resource-card__dl">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download free
+          </a>
+        </div>
+        <div class="resource-card animate-in">
+          <span class="resource-card__tag resource-card__tag--comms">Communications</span>
+          <h4>Content Calendar Template</h4>
+          <p>Plan your social media, newsletters, and campaigns in one view. Stop posting randomly.</p>
+          <a href="#" class="resource-card__dl">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download free
+          </a>
+        </div>
+        <div class="resource-card animate-in">
+          <span class="resource-card__tag resource-card__tag--hiring">Hiring</span>
+          <h4>Hiring Scorecard</h4>
+          <p>Evaluate candidates consistently with a clear scorecard. Stop hiring based on vibes alone.</p>
+          <a href="#" class="resource-card__dl">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download free
+          </a>
+        </div>
+        <div class="resource-card animate-in">
+          <span class="resource-card__tag resource-card__tag--legal">Legal</span>
+          <h4>Business Registration Checklist</h4>
+          <p>Country-by-country checklist for registering your business properly. Nigeria, Ghana, Kenya, and more.</p>
+          <a href="#" class="resource-card__dl">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download free
+          </a>
+        </div>
+      </div>
+
+      <div class="coming-soon animate-in">
+        <h4>More resources coming soon</h4>
+        <p>We're building out the Playbook every week. Join the Circle to know when new tools drop.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--lavender" style="text-align:center;">
+    <div class="container">
+      <span class="eyebrow animate-in">Want more?</span>
+      <h2 class="section__headline animate-in" style="margin:0 auto 16px;">Join the community for<br>weekly resources and insights.</h2>
+      <div class="animate-in" style="margin-top:32px;">
+        <a href="/circle" class="btn btn--whatsapp">Join the Circle on WhatsApp &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__closing animate-in">You're not building alone.</p>
+      <p class="footer__pillars animate-in">Build &middot; Scale &middot; Last</p>
+      <nav class="footer__links animate-in">
+        <a href="/about">About</a>
+        <a href="/brand-test">Brand Test</a>
+        <a href="/playbook">Playbook</a>
+        <a href="/circle">Circle</a>
+        <a href="/dispatch">Dispatch</a>
+      </nav>
+      <p class="footer__social animate-in">@bidyahq — Instagram &middot; X &middot; LinkedIn &middot; TikTok</p>
+      <p class="footer__legal animate-in">&copy; 2025 Bidya. Built for African businesses.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

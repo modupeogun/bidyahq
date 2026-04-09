@@ -97,6 +97,38 @@ input {
   color: var(--amber);
 }
 
+/* --- Image Treatment --- */
+.img-treated {
+  filter: saturate(0.8) contrast(1.05);
+  border-radius: var(--radius);
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.img-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 48px 0;
+}
+
+.img-grid-2 img {
+  height: 320px;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .img-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .img-grid-2 img {
+    height: 240px;
+  }
+}
+
 /* --- Buttons --- */
 .btn {
   display: inline-block;
