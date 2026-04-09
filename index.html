@@ -15,7 +15,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Bebas+Neue&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Analytics placeholder -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
@@ -79,14 +79,16 @@
       justify-content: center;
       margin-bottom: 16px;
     }
-    .how-card__icon--build { background: rgba(104,96,184,0.12); color: var(--indigo); }
-    .how-card__icon--scale { background: rgba(212,120,112,0.12); color: var(--coral); }
-    .how-card__icon--last  { background: rgba(232,184,106,0.12); color: var(--amber); }
+    .how-card__icon--build { background: rgba(204,34,0,0.1); color: var(--build); }
+    .how-card__icon--scale { background: rgba(91,168,208,0.12); color: var(--scale); }
+    .how-card__icon--last  { background: rgba(205,217,77,0.15); color: var(--cocoa); }
     .how-card h4 {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 20px;
-      color: var(--ink);
+      font-family: var(--font-heading);
+      font-weight: 400;
+      font-size: 22px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--cocoa);
       margin-bottom: 8px;
     }
     .how-card p {
@@ -103,7 +105,7 @@
       margin-top: 48px;
     }
     .spotlight-card {
-      background: var(--lavender);
+      background: var(--cream);
       border-radius: var(--radius);
       overflow: hidden;
       transition: transform 200ms ease, box-shadow 200ms ease;
@@ -128,8 +130,8 @@
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--indigo);
-      background: rgba(104,96,184,0.1);
+      color: var(--cocoa);
+      background: rgba(92,51,23,0.08);
       padding: 4px 10px;
       border-radius: 4px;
       margin-bottom: 12px;
@@ -164,7 +166,7 @@
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <div class="nav__left">
-        <a href="/" class="nav__logo">Bidya</a>
+        <a href="/" class="nav__logo"><img src="/images/bidya-wordmark.svg" alt="Bidya" class="nav__logo-img"></a>
         <div class="nav__links">
           <a href="/about">About</a>
           <a href="/brand-test">Brand Test</a>

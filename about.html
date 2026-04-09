@@ -15,7 +15,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Bebas+Neue&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Analytics placeholder -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
@@ -25,16 +25,16 @@
   <style>
     /* About page — Hero */
     .about-hero {
-      background: var(--lavender);
+      background: var(--cream);
       padding: 160px 0 var(--section-pad);
     }
 
     .about-hero__headline {
-      font-family: var(--font-display);
+      font-family: var(--font-script);
       font-weight: 700;
       font-size: clamp(32px, 5vw, 48px);
       line-height: 1.2;
-      color: var(--ink);
+      color: var(--cocoa);
       margin-bottom: 32px;
       max-width: 640px;
     }
@@ -46,7 +46,7 @@
     .about-hero__body p {
       font-size: 17px;
       line-height: 1.8;
-      color: rgba(26, 23, 48, 0.75);
+      color: rgba(26, 26, 26, 0.75);
       margin-bottom: 20px;
     }
 
@@ -58,7 +58,7 @@
     .premise__body p {
       font-size: 17px;
       line-height: 1.8;
-      color: rgba(26, 23, 48, 0.75);
+      color: rgba(26, 26, 26, 0.75);
       margin-bottom: 16px;
     }
 
@@ -71,7 +71,7 @@
     }
 
     .persona-card {
-      background: var(--lavender);
+      background: var(--cream);
       border-radius: var(--radius);
       padding: 32px;
       transition: transform 200ms ease, box-shadow 200ms ease;
@@ -79,11 +79,11 @@
 
     .persona-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(26, 23, 48, 0.08);
+      box-shadow: 0 8px 24px rgba(26, 26, 26, 0.08);
     }
 
     .persona-card__title {
-      font-family: var(--font-display);
+      font-family: var(--font-heading);
       font-weight: 700;
       font-size: 22px;
       color: var(--ink);
@@ -96,22 +96,22 @@
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--indigo);
+      color: var(--cocoa);
       margin-bottom: 16px;
     }
 
     .persona-card__desc {
       font-size: 15px;
       line-height: 1.7;
-      color: rgba(26, 23, 48, 0.65);
+      color: rgba(26, 26, 26, 0.65);
     }
 
     /* About page — Promise */
     .promise__statement {
-      font-family: var(--font-display);
+      font-family: var(--font-script);
       font-weight: 700;
-      font-size: clamp(22px, 3.5vw, 32px);
-      line-height: 1.5;
+      font-size: clamp(24px, 3.5vw, 36px);
+      line-height: 1.4;
       color: var(--white);
       max-width: 720px;
     }
@@ -140,7 +140,7 @@
   <nav class="nav nav--scrolled nav--force-dark" id="nav">
     <div class="nav__inner">
       <div class="nav__left">
-        <a href="/" class="nav__logo">Bidya</a>
+        <a href="/" class="nav__logo"><img src="/images/bidya-wordmark.svg" alt="Bidya" class="nav__logo-img"></a>
         <div class="nav__links">
           <a href="/about">About</a>
           <a href="/brand-test">Brand Test</a>

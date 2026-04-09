@@ -15,7 +15,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Bebas+Neue&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/css/styles.css">
   <style>
@@ -30,19 +30,19 @@
     }
     .stat-bar__number {
       display: block;
-      font-family: var(--font-display);
+      font-family: var(--font-heading);
       font-weight: 700;
       font-size: 40px;
-      color: var(--indigo);
+      color: var(--cocoa);
       margin-bottom: 4px;
     }
     .stat-bar__label {
       font-size: 13px;
-      color: rgba(26, 23, 48, 0.6);
+      color: rgba(26, 26, 26, 0.6);
       line-height: 1.4;
     }
     .week-card {
-      background: var(--lavender);
+      background: var(--cream);
       border-radius: var(--radius);
       padding: 40px;
       margin-bottom: 24px;
@@ -54,20 +54,20 @@
       margin-bottom: 8px;
     }
     .week-card__number {
-      font-family: var(--font-display);
+      font-family: var(--font-heading);
       font-weight: 700;
       font-size: 24px;
-      color: var(--indigo);
+      color: var(--cocoa);
     }
     .week-card__name {
-      font-family: var(--font-display);
+      font-family: var(--font-heading);
       font-weight: 700;
       font-size: 24px;
       color: var(--ink);
     }
     .week-card__focus {
       font-style: italic;
-      color: var(--coral);
+      color: var(--red);
       font-size: 15px;
       margin-bottom: 20px;
     }
@@ -81,13 +81,13 @@
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--indigo);
+      color: var(--cocoa);
       margin-bottom: 8px;
     }
     .week-card__col p {
       font-size: 15px;
       line-height: 1.7;
-      color: rgba(26, 23, 48, 0.7);
+      color: rgba(26, 26, 26, 0.7);
     }
     .leaves-grid {
       display: grid;
@@ -96,12 +96,12 @@
       margin-top: 40px;
     }
     .leaves-card {
-      background: rgba(104, 96, 184, 0.1);
+      background: rgba(92, 51, 23, 0.1);
       border-radius: var(--radius);
       padding: 32px;
     }
     .leaves-card h4 {
-      font-family: var(--font-display);
+      font-family: var(--font-heading);
       font-weight: 700;
       font-size: 18px;
       color: var(--white);
@@ -110,7 +110,7 @@
     .leaves-card p {
       font-size: 15px;
       line-height: 1.7;
-      color: var(--soft);
+      color: var(--lime);
     }
     .process-steps {
       display: grid;
@@ -128,7 +128,7 @@
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background: var(--indigo);
+      background: var(--cocoa);
       color: var(--white);
       font-weight: 700;
       font-size: 18px;
@@ -146,12 +146,12 @@
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--soft);
+      color: var(--lime);
       margin-bottom: 4px;
     }
     .process-step p {
       font-size: 14px;
-      color: rgba(26, 23, 48, 0.6);
+      color: rgba(26, 26, 26, 0.6);
       line-height: 1.5;
     }
     .app-form {
@@ -173,7 +173,7 @@
     .form-group textarea {
       width: 100%;
       padding: 12px 16px;
-      border: 2px solid rgba(26, 23, 48, 0.12);
+      border: 2px solid rgba(26, 26, 26, 0.12);
       border-radius: 8px;
       font-family: var(--font-body);
       font-size: 15px;
@@ -185,7 +185,7 @@
     .form-group select:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: var(--indigo);
+      border-color: var(--cocoa);
     }
     .form-group textarea {
       resize: vertical;
@@ -202,7 +202,7 @@
     .form-confirm p {
       font-size: 16px;
       line-height: 1.7;
-      color: rgba(26, 23, 48, 0.75);
+      color: rgba(26, 26, 26, 0.75);
     }
     @media (max-width: 768px) {
       .stat-bar { grid-template-columns: repeat(2, 1fr); }
@@ -219,7 +219,7 @@
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <div class="nav__left">
-        <a href="/" class="nav__logo">Bidya</a>
+        <a href="/" class="nav__logo"><img src="/images/bidya-wordmark.svg" alt="Bidya" class="nav__logo-img"></a>
         <div class="nav__links">
           <a href="/about">About</a>
           <a href="/brand-test">Brand Test</a>

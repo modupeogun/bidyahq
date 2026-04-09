@@ -15,7 +15,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Bebas+Neue&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/css/styles.css">
   <style>
@@ -25,21 +25,21 @@
       align-items: center;
       padding-top: 120px;
       padding-bottom: 80px;
-      background: var(--lavender);
+      background: var(--cream);
     }
     .playbook-hero h1 {
-      font-family: var(--font-display);
+      font-family: var(--font-script);
       font-weight: 700;
       font-size: clamp(36px, 5vw, 52px);
       line-height: 1.15;
-      color: var(--ink);
+      color: var(--cocoa);
       margin-bottom: 24px;
       max-width: 640px;
     }
     .playbook-hero__sub {
       font-size: 17px;
       line-height: 1.7;
-      color: rgba(26,23,48,0.7);
+      color: rgba(26,26,26,0.7);
       max-width: 560px;
     }
     .category-tabs {
@@ -53,17 +53,17 @@
       border-radius: 100px;
       font-size: 14px;
       font-weight: 600;
-      border: 2px solid rgba(26,23,48,0.1);
-      color: rgba(26,23,48,0.6);
+      border: 2px solid rgba(26,26,26,0.1);
+      color: rgba(26,26,26,0.6);
       background: var(--white);
       cursor: pointer;
       transition: all 200ms ease;
     }
     .category-tab:hover,
     .category-tab--active {
-      border-color: var(--indigo);
-      color: var(--indigo);
-      background: var(--lavender);
+      border-color: var(--cocoa);
+      color: var(--cocoa);
+      background: var(--cream);
     }
     .resource-grid {
       display: grid;
@@ -71,14 +71,14 @@
       gap: 24px;
     }
     .resource-card {
-      background: var(--lavender);
+      background: var(--cream);
       border-radius: var(--radius);
       padding: 32px;
       transition: transform 200ms ease, box-shadow 200ms ease;
     }
     .resource-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(26,23,48,0.08);
+      box-shadow: 0 8px 24px rgba(26,26,26,0.08);
     }
     .resource-card__tag {
       display: inline-block;
@@ -90,12 +90,12 @@
       border-radius: 4px;
       margin-bottom: 16px;
     }
-    .resource-card__tag--ops { background: rgba(104,96,184,0.1); color: var(--indigo); }
-    .resource-card__tag--brand { background: rgba(212,120,112,0.1); color: var(--coral); }
+    .resource-card__tag--ops { background: rgba(92,51,23,0.1); color: var(--cocoa); }
+    .resource-card__tag--brand { background: rgba(212,120,112,0.1); color: var(--red); }
     .resource-card__tag--finance { background: rgba(232,184,106,0.15); color: #B8912E; }
-    .resource-card__tag--comms { background: rgba(26,23,48,0.08); color: var(--ink); }
-    .resource-card__tag--hiring { background: rgba(104,96,184,0.1); color: var(--indigo); }
-    .resource-card__tag--legal { background: rgba(212,120,112,0.1); color: var(--coral); }
+    .resource-card__tag--comms { background: rgba(26,26,26,0.08); color: var(--ink); }
+    .resource-card__tag--hiring { background: rgba(92,51,23,0.1); color: var(--cocoa); }
+    .resource-card__tag--legal { background: rgba(212,120,112,0.1); color: var(--red); }
     .resource-card h4 {
       font-weight: 600;
       font-size: 17px;
@@ -105,7 +105,7 @@
     }
     .resource-card p {
       font-size: 14px;
-      color: rgba(26,23,48,0.6);
+      color: rgba(26,26,26,0.6);
       line-height: 1.6;
       margin-bottom: 16px;
     }
@@ -115,7 +115,7 @@
       gap: 6px;
       font-size: 14px;
       font-weight: 600;
-      color: var(--indigo);
+      color: var(--cocoa);
     }
     .resource-card__dl:hover {
       color: var(--ink);
@@ -125,11 +125,11 @@
       padding: 60px 24px;
       background: var(--white);
       border-radius: var(--radius);
-      border: 2px dashed rgba(26,23,48,0.1);
+      border: 2px dashed rgba(26,26,26,0.1);
       margin-top: 24px;
     }
     .coming-soon h4 {
-      font-family: var(--font-display);
+      font-family: var(--font-heading);
       font-weight: 700;
       font-size: 20px;
       color: var(--ink);
@@ -137,7 +137,7 @@
     }
     .coming-soon p {
       font-size: 15px;
-      color: rgba(26,23,48,0.5);
+      color: rgba(26,26,26,0.5);
     }
     @media (max-width: 768px) {
       .resource-grid { grid-template-columns: 1fr; }
@@ -153,7 +153,7 @@
   <nav class="nav nav--scrolled nav--force-dark" id="nav">
     <div class="nav__inner">
       <div class="nav__left">
-        <a href="/" class="nav__logo">Bidya</a>
+        <a href="/" class="nav__logo"><img src="/images/bidya-wordmark.svg" alt="Bidya" class="nav__logo-img"></a>
         <div class="nav__links">
           <a href="/about">About</a>
           <a href="/brand-test">Brand Test</a>
