@@ -325,7 +325,7 @@ input {
   transition: transform 200ms ease;
 }
 
-.nav__dropdown:hover .nav__dropdown-trigger::after {
+.nav__dropdown--open .nav__dropdown-trigger::after {
   transform: rotate(180deg);
 }
 
@@ -349,10 +349,31 @@ input {
   right: 0;
 }
 
-.nav__dropdown:hover .nav__dropdown-menu {
+.nav__dropdown--open .nav__dropdown-menu {
   opacity: 1;
   pointer-events: all;
   transform: translateY(0);
+}
+
+/* Force dark nav text on pages with light-colored heroes */
+.nav--force-dark .nav__logo {
+  color: var(--ink);
+}
+
+.nav--force-dark .nav__links > a,
+.nav--force-dark .nav__right > a:not(.btn),
+.nav--force-dark .nav__dropdown-trigger {
+  color: rgba(26, 23, 48, 0.6);
+}
+
+.nav--force-dark .nav__links > a:hover,
+.nav--force-dark .nav__right > a:not(.btn):hover,
+.nav--force-dark .nav__dropdown-trigger:hover {
+  color: var(--ink);
+}
+
+.nav--force-dark .nav__hamburger span {
+  background: var(--ink);
 }
 
 .nav__dropdown-item {
